@@ -4,7 +4,8 @@ Student lab preparation pages, served at https://caminoltd.github.io
 
 | Path | Purpose |
 |---|---|
-| `/ccse/` | CCSE R82 lab preparation (action plan) |
+| `/lab-preparation/` | Lab preparation checklist (all courses) |
+| `/ccse/` | CCSE topology PDF; index redirects to /lab-preparation/ |
 | `/common/` | Shared Skillable help + PDFs |
 
 ## Files to add
@@ -13,7 +14,7 @@ Student lab preparation pages, served at https://caminoltd.github.io
 - `ccse/topology.png` (only if publishing is cleared; then uncomment the section in `ccse/index.md`)
 
 ## Adding a course
-Copy `ccse/` to e.g. `ccte/`, edit `index.md`, add a row to the table in the root `index.md`.
+Edit the `steps:` list at the top of `lab-preparation/index.md`. Put course-specific files (e.g. topology.pdf) in a course folder such as `ccte/` and link them from the Reference section.
 
 ## Rules
 - Never commit Training Keys or student names (the repo is public and git keeps history).

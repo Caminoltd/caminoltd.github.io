@@ -53,3 +53,4 @@ footer { border-top: 1px solid var(--line); padding-top: 14px; padding-bottom: 3
 .step-shots img { display: block; background: #fff; }
 .step-shots figcaption { font-size: 14px; color: var(--muted); margin-top: 4px; }
 @media (max-width: 520px) { .step-detail, .step-links, .step-shots { margin-left: 0; } }
+.step-shots img { max-height: 70vh; width: auto; }

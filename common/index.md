@@ -16,7 +16,7 @@ title: Skillable lab help
 ## Keyboard and timezone
 
 The lab machines need to match your keyboard and timezone.
-Your course page explains the quick way to change them. The full illustrated guide is here:
+The [lab preparation checklist](../lab-preparation/) explains the quick way to change them. The full illustrated guide is here:
 
 - [Keyboard and timezone change (PDF)](keyboard-timezone.pdf)
 

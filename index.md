@@ -4,11 +4,9 @@ layout: default
 
 # Check Point Training Labs
 
-Lab preparation guides for Camino Ltd Check Point courses.
-Your joining email links to the page for your course.
+Lab preparation for Camino Ltd Check Point courses.
 
-| Course | Guide |
-|---|---|
-| CCSE R82 | [caminoltd.github.io/ccse](ccse/) |
+- **[Lab preparation checklist](lab-preparation/)**: work through this before the first lab
+- [Skillable lab help](common/): registration, keyboard, timezone and navigation
 
-General help with Skillable labs: [keyboard, timezone and navigation](common/).
+**Lab topologies:** [CCSE R82](ccse/topology.pdf)
