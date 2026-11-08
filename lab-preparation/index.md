@@ -20,9 +20,6 @@ steps:
     images:
       - src: /common/img/0-rdp-host.png
         caption: "Resources tab – RDP-HOST is the last VM in the list"
-    links:
-      - label: Lab navigation tips (PDF)
-        url: /common/navigation.pdf
   - title: On RDP-HOST, open File Explorer and run `C:\scripts\changes`
     detail: There are several files called **changes**. Run the one whose Type is **Windows Command Script**.
     images:
