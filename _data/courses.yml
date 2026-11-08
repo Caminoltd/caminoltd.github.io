@@ -1,0 +1,28 @@
+# Order here = order on the home page. Add a course: add an entry here and a folder <slug>/index.md
+- slug: cpda
+  code: CPDA
+  name: Check Point Deployment Administrator
+- slug: ccsa
+  code: CCSA
+  name: Check Point Certified Security Administrator
+- slug: ccse
+  code: CCSE
+  name: Check Point Certified Security Expert
+- slug: ccta
+  code: CCTA
+  name: Check Point Certified Troubleshooting Administrator
+- slug: ccte
+  code: CCTE
+  name: Check Point Certified Troubleshooting Expert
+- slug: ctps
+  code: CTPS
+  name: Check Point Certified Threat Prevention Specialist
+- slug: cces
+  code: CCES
+  name: Check Point Certified Endpoint Specialist
+- slug: cpvs
+  code: CPVS
+  name: Check Point Certified VPN Specialist
+- slug: ccma
+  code: CCMA
+  name: ""

@@ -1,0 +1,22 @@
+---
+layout: default
+---
+{% assign c = site.data.courses | where: "slug", page.course | first %}
+<p class="eyebrow">{{ c.code }}</p>
+<h1>{{ c.name | default: c.code }}</h1>
+<p class="lead">Course-specific resources. Before the first lab, everyone should work through the <a href="{{ '/lab-preparation/' | relative_url }}">lab preparation checklist</a>.</p>
+
+<h2>Resources</h2>
+{% if page.resources and page.resources.size > 0 %}
+<ul class="resources">
+{% for r in page.resources %}
+  <li><a href="{{ r.url | relative_url }}" target="_blank" rel="noopener">{{ r.label }}</a>{% if r.note %}<span class="note"> – {{ r.note }}</span>{% endif %}</li>
+{% endfor %}
+</ul>
+{% else %}
+<p class="muted">No course-specific resources yet.</p>
+{% endif %}
+
+{{ content }}
+
+<p><a href="{{ '/' | relative_url }}">← All courses</a></p>

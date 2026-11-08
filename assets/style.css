@@ -54,3 +54,19 @@ footer { border-top: 1px solid var(--line); padding-top: 14px; padding-bottom: 3
 .step-shots figcaption { font-size: 14px; color: var(--muted); margin-top: 4px; }
 @media (max-width: 520px) { .step-detail, .step-links, .step-shots { margin-left: 0; } }
 .step-shots img { max-height: 70vh; width: auto; }
+
+/* ---------- home + course pages ---------- */
+.muted { color: var(--muted); }
+.eyebrow { margin: 28px 0 0; font-weight: 700; letter-spacing: .08em; color: var(--accent); font-size: 14px; }
+.eyebrow + h1 { margin-top: 2px; }
+.cta { display: block; text-decoration: none; color: var(--ink); border: 1px solid var(--line); border-left: 5px solid var(--accent); border-radius: 8px; padding: 14px 18px; margin: 18px 0 8px; background: var(--panel); }
+.cta strong { display: block; font-size: 1.15em; color: var(--accent); }
+.cta span { color: var(--muted); }
+.cta:hover { border-color: var(--accent); }
+.course-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; margin: 14px 0 22px; }
+.course-card { display: block; text-decoration: none; color: var(--ink); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; }
+.course-card:hover { border-color: var(--accent); }
+.course-card strong { display: block; color: var(--accent); font-size: 1.1em; letter-spacing: .03em; }
+.course-card span { display: block; font-size: 13px; line-height: 1.35; color: var(--muted); margin-top: 3px; }
+.resources li { margin: 6px 0; }
+.resources .note { color: var(--muted); }

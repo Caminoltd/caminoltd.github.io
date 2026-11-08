@@ -20,7 +20,7 @@ steps:
     images:
       - src: /common/img/0-rdp-host.png
         caption: "Resources tab – RDP-HOST is the last VM in the list"
-  - title: On RDP-HOST, open File Explorer and run `C:\scripts\changes.cmd`
+  - title: On RDP-HOST, open File Explorer and run `C:\scripts\changes`
     detail: There are several files called **changes**. Run the one whose Type is **Windows Command Script**.
     images:
       - src: /common/img/1-file-explorer.png
@@ -50,7 +50,7 @@ steps:
 
 ## Reference
 
-**Lab topologies:** [CCSE R82](../ccse/topology.pdf)
+**Course resources and lab topologies:** [all courses](../)
 
 
 - [Lab navigation tips (PDF)](../common/navigation.pdf)
