@@ -1,0 +1,5 @@
+title: Camino Ltd – Check Point Training Labs
+description: Lab preparation guides for Check Point training courses
+markdown: kramdown
+exclude:
+  - README.md
