@@ -1,0 +1,59 @@
+---
+layout: default
+---
+<h1>{{ page.heading | default: page.title }}</h1>
+{% if page.intro %}<p class="lead">{{ page.intro }}</p>{% endif %}
+
+<div class="progress" aria-live="polite">
+  <div class="progress-bar"><span id="bar"></span></div>
+  <div class="progress-text"><span id="count">0</span> of {{ page.steps | size }} done</div>
+</div>
+
+<ol class="checklist" id="checklist">
+{% for step in page.steps %}
+  <li class="step" data-id="{{ forloop.index }}">
+    <label>
+      <input type="checkbox">
+      <span class="tick" aria-hidden="true"></span>
+      <span class="step-title">{{ step.title | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span>
+    </label>
+    {% if step.detail %}<div class="step-detail">{{ step.detail | markdownify }}</div>{% endif %}
+    {% if step.links %}<div class="step-links">{% for l in step.links %}<a href="{{ l.url | relative_url }}" target="_blank" rel="noopener">{{ l.label }}</a>{% endfor %}</div>{% endif %}
+  </li>
+{% endfor %}
+</ol>
+
+<div class="done-msg" id="done">All done. You're ready for the course.</div>
+<p><button type="button" class="reset" id="reset">Clear my ticks</button></p>
+
+{{ content }}
+
+<script>
+(function () {
+  var key = 'checklist:' + location.pathname;
+  var items = document.querySelectorAll('#checklist .step');
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(key)) || {}; } catch (e) { state = {}; }
+
+  function save() { try { localStorage.setItem(key, JSON.stringify(state)); } catch (e) {} }
+  function update() {
+    var n = 0;
+    items.forEach(function (li) {
+      var on = !!state[li.dataset.id];
+      li.classList.toggle('is-done', on);
+      li.querySelector('input').checked = on;
+      if (on) n++;
+    });
+    document.getElementById('count').textContent = n;
+    document.getElementById('bar').style.width = (items.length ? n / items.length * 100 : 0) + '%';
+    document.getElementById('done').style.display = (n === items.length) ? 'block' : 'none';
+  }
+  items.forEach(function (li) {
+    li.querySelector('input').addEventListener('change', function (e) {
+      state[li.dataset.id] = e.target.checked; save(); update();
+    });
+  });
+  document.getElementById('reset').addEventListener('click', function () { state = {}; save(); update(); });
+  update();
+})();
+</script>
