@@ -20,7 +20,7 @@ steps:
     images:
       - src: /common/img/0-rdp-host.png
         caption: "Resources tab – RDP-HOST is the last VM in the list"
-  - title: On RDP-HOST, open File Explorer and run `C:\scripts\changes`
+  - title: On RDP-HOST, open File Explorer and run `C:\scripts\changes.cmd`
     detail: There are several files called **changes**. Run the one whose Type is **Windows Command Script**.
     images:
       - src: /common/img/1-file-explorer.png
