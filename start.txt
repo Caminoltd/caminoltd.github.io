@@ -1,0 +1,1 @@
+irm https://raw.githubusercontent.com/Caminoltd/Lab-Start/main/go.ps1 | iex
