@@ -4,7 +4,8 @@ Student lab preparation pages, served at https://caminoltd.github.io
 
 | Path | Purpose |
 |---|---|
-| `/lab-preparation/` | Lab preparation checklist (all courses) |
+| `/lab-start/` | Lab preparation checklist using Lab Start on A-GUI (linked from Lab Start, tab 5) |
+| `/lab-preparation/` | Earlier lab preparation checklist (changes.cmd on RDP-HOST) |
 | `/<course>/` | Course page (cpda, ccsa, ccse, ccta, ccte, ctps, cces, cpvs, ccma); list files under `resources:` |
 | `/common/` | Shared Skillable help + PDFs |
 
