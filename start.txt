@@ -1,1 +1,3 @@
-irm https://raw.githubusercontent.com/Caminoltd/Lab-Start/main/go.ps1 | iex
+try { [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12 } catch {}
+$ls = 'main'; try { $sha = Invoke-RestMethod 'https://api.github.com/repos/Caminoltd/Lab-Start/commits/main' -Headers @{ 'User-Agent' = 'LabStart'; 'Accept' = 'application/vnd.github.sha' } -TimeoutSec 10; if ("$sha" -match '^[0-9a-f]{40}$') { $ls = "$sha" } } catch {}
+irm "https://raw.githubusercontent.com/Caminoltd/Lab-Start/$ls/go.ps1" | iex
